@@ -53,6 +53,7 @@ class App extends React.Component {
       <div>
         {/* <h1>Hola mundo!!!</h1>
         <p>Un párrafo</p> */}
+        <Card />
 
 
         <CardLayout>
@@ -68,7 +69,7 @@ class App extends React.Component {
 
           <h2>Mi título</h2>
 
-          <Contador />
+          {this.state.darkMode ? <Contador /> : null}
         </CardLayout>
 
         <CardLayout>
