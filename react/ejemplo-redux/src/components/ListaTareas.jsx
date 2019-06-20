@@ -12,10 +12,10 @@ const ListaTareas = (props) => {
   );
 }
 
-const mapStateToProps = (store) => {
-  console.log(store);
+const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    tareas: store.listaTareas
+    tareas: state.listaTareas
   };
 }
 

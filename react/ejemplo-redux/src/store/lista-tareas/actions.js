@@ -1,6 +1,7 @@
 import * as ActionTypes from "./action-types";
 
 function addTarea(tarea) {
+  console.log('Action Creator addTarea')
   return {
     type: ActionTypes.ADD_TAREA,
     payload: tarea

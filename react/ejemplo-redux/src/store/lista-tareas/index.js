@@ -15,8 +15,13 @@ const initialState = {
 
 function addTarea(state, tarea) {
   const nuevaTarea = Object.assign({}, tarea, {id: state.nextId});
+
   const newListaTareas = [].concat(state.listaTareas, nuevaTarea)
+  console.log(newListaTareas)
+
+
   const newState = Object.assign({}, state, {listaTareas: newListaTareas, nextId: state.nextId+1});
+  console.log(newState)
   return newState;
 }
 

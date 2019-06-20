@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { addTarea } from '../store/lista-tareas/actions';
 
 class Form extends React.Component {
@@ -20,7 +21,9 @@ class Form extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    addTarea(this.state);
+    this.props.addTarea(this.state);
+    // const action = addTarea(this.state);
+    // dispatch(action);
   }
 
   render() {
@@ -40,4 +43,10 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+const mapDispatchToProps = {
+  addTarea
+}
+
+const withProps = connect(null, mapDispatchToProps);
+
+export default withProps(Form);
