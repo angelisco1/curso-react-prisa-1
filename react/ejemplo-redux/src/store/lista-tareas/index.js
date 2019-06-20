@@ -3,15 +3,17 @@ import * as ActionTypes from "./action-types";
 const initialState = {
   listaTareas: [],
   textoFiltro: '',
-  nextId: 0,
+  // nextId: 0,
   tareasFiltradas: []
 }
 
 function addTarea(state, tarea) {
-  const nuevaTarea = {...tarea, id: state.nextId};
-  const newListaTareas = [...state.listaTareas, nuevaTarea]
+  const newListaTareas = [...state.listaTareas, tarea]
+  // const nuevaTarea = {...tarea, id: state.nextId};
+  // const newListaTareas = [...state.listaTareas, nuevaTarea]
 
-  const newState = {...state, listaTareas: newListaTareas, nextId: state.nextId+1, tareasFiltradas: newListaTareas};
+  // const newState = {...state, listaTareas: newListaTareas, nextId: state.nextId+1, tareasFiltradas: newListaTareas};
+  const newState = {...state, listaTareas: newListaTareas, tareasFiltradas: newListaTareas};
 
   return newState;
 }
