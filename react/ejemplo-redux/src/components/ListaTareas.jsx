@@ -15,7 +15,7 @@ const ListaTareas = (props) => {
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    tareas: state.listaTareas
+    tareas: state.tareasFiltradas
   };
 }
 

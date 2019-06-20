@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { addTarea } from '../store/lista-tareas/actions';
 
 class Form extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       nombre: '',
       completada: false
@@ -23,7 +23,7 @@ class Form extends React.Component {
     event.preventDefault();
     this.props.addTarea(this.state);
     // const action = addTarea(this.state);
-    // dispatch(action);
+    // this.props.store.dispatch(action);
   }
 
   render() {
@@ -50,3 +50,4 @@ const mapDispatchToProps = {
 const withProps = connect(null, mapDispatchToProps);
 
 export default withProps(Form);
+// export default Form;

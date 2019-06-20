@@ -15,13 +15,10 @@ function delTarea(tarea) {
   }
 }
 
-function editTarea(id, tareaActualizada) {
+function editTarea(tareaActualizada) {
   return {
     type: ActionTypes.EDIT_TAREA,
-    payload: {
-      id,
-      tareaActualizada
-    }
+    payload: tareaActualizada
   }
 }
 

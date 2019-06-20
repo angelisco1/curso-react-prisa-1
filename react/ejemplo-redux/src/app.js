@@ -8,8 +8,9 @@ import configStore from './store/configureStore';
 
 const store = configStore();
 
-const App = () => (
+const App = (props) => (
   <div>
+    {/* <Form store={store} /> */}
     <Form />
     <Filtro />
     <ListaTareas />
